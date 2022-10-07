@@ -16,7 +16,7 @@ explore: f_lineitems {
   join: d_part {
     view_label: "Parts"
     type: left_outer
-    sql_on: ${f_lineitems.l_partkey} = #${d_part.p_partkey} ;;
+    sql_on: ${f_lineitems.l_partkey} = ${d_part.p_partkey} ;;
     relationship: many_to_one
   }
   join: d_supplier {
