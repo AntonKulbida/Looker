@@ -179,6 +179,7 @@ view: f_lineitems {
     type: number
     sql: ${Gross_revenue}-${TotalCost} ;;
     value_format_name: usd
+    drill_fields: [d_supplier.s_region]
   }
 
   measure: MarginPercentage {
