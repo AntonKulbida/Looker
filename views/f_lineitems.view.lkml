@@ -179,7 +179,7 @@ view: f_lineitems {
     type: number
     sql: ${Gross_revenue}-${TotalCost} ;;
     value_format_name: usd
-    drill_fields: [d_supplier.s_region]
+    drill_fields: [d_supplier.s_Account_Balance, d_supplier.s_region, Gross_Margin]
   }
 
   measure: MarginPercentage {
