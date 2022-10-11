@@ -180,6 +180,10 @@ view: f_lineitems {
     sql: ${Gross_revenue}-${TotalCost} ;;
     value_format_name: usd
     drill_fields: [d_supplier.s_Account_Balance, d_supplier.s_region, Gross_Margin]
+    link: {
+      label: "Searching suppliers"
+      url: "https://www.google.com"
+    }
   }
 
   measure: MarginPercentage {
@@ -230,6 +234,12 @@ view: f_lineitems {
 
   measure: TotalNumberofOrders  {
     label: "Total Number of orders"
+    type: count_distinct
+    sql: ${l_orderkey} ;;
+  }
+
+  measure: NumberOfSales  {
+    label: "Number Of Sales"
     type: count_distinct
     sql: ${l_orderkey} ;;
   }
