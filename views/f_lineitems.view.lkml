@@ -195,6 +195,14 @@ view: f_lineitems {
     type: number
     sql: ${Gross_Margin}/nullif(${Gross_revenue},0) ;;
     value_format_name: percent_2
+    html:
+    {% if value > 100 %}
+    <span style="color:darkgreen;">{{ rendered_value }}</span>
+      {% elsif value > 50 %}
+    <span style="color:goldenrod;">{{ rendered_value }}</span>
+      {% else %}
+    <span style="color:darkred;">{{ rendered_value }}</span>
+    {% endif %} ;;
   }
 
   dimension: ReturnedFlag {
