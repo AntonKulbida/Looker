@@ -1,6 +1,5 @@
 view: f_lineitems {
-  sql_table_name: "DATA_MART"."F_LINEITEMS"
-    ;;
+  sql_table_name: "DATA_MART"."F_LINEITEMS" ;;
 
   dimension: l_availqty {
     type: number
@@ -165,6 +164,10 @@ view: f_lineitems {
     sql: ${l_totalprice} ;;
     filters: [l_orderstatus: "F"]
     value_format_name: usd
+    link: {
+      label: "Searching suppliers"
+      url: "https://www.google.com"
+    }
   }
 
   measure: TotalCost{
@@ -182,7 +185,8 @@ view: f_lineitems {
     drill_fields: [d_supplier.s_Account_Balance, d_supplier.s_region, Gross_Margin]
     link: {
       label: "Searching suppliers"
-      url: "https://www.google.com"
+      # url: "https://www.google.com"
+      url: "https://epam.cloud.looker.com/dashboards/223?fields=d_dates.date_val"
     }
   }
 
