@@ -193,7 +193,7 @@ view: f_lineitems {
       label: "Target"
       # url: "https://www.google.com"
       # url: "https://epam.cloud.looker.com/dashboards/243?fields=d_supplier.s_region"
-      url: "https://epam.cloud.looker.com/looks/408?region={{ _filters['d_supplier.region']}}"
+      url: "https://epam.cloud.looker.com/dashboards/245?region={{ _filters['d_supplier.region']}}"
     }
   }
 
