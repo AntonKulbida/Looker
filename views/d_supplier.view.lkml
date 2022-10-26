@@ -30,6 +30,18 @@ view: d_supplier {
   dimension: region {
     type: string
     sql: ${TABLE}."S_REGION" ;;
+    link: {
+      label: "Target"
+      # url: "https://www.google.com"
+      # url: "https://epam.cloud.looker.com/dashboards/243?fields=d_supplier.s_region"
+      url: "https://epam.cloud.looker.com/dashboards/245?region={{ value }}"
+    }
+    link: {
+      label: "Google"
+      # url: "https://www.google.com"
+      # url: "https://epam.cloud.looker.com/dashboards/243?fields=d_supplier.s_region"
+      url: "http://www.google.com/search?q={{ value }}"
+    }
   }
 
   dimension: s_suppkey {
