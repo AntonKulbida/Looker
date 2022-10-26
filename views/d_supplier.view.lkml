@@ -27,7 +27,7 @@ view: d_supplier {
     sql: ${TABLE}."S_PHONE" ;;
   }
 
-  dimension: s_region {
+  dimension: region {
     type: string
     sql: ${TABLE}."S_REGION" ;;
   }

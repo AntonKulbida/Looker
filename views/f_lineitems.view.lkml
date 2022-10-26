@@ -186,7 +186,8 @@ view: f_lineitems {
     link: {
       label: "Searching suppliers"
       # url: "https://www.google.com"
-      url: "https://epam.cloud.looker.com/dashboards/223?fields=d_dates.date_val"
+      # url: "https://epam.cloud.looker.com/dashboards/243?fields=d_supplier.s_region"
+      url: "https://epam.cloud.looker.com/dashboards/243?region={{ _filters['d_supplier.region'] | url_encode }}"
     }
   }
 
@@ -199,7 +200,7 @@ view: f_lineitems {
     {% if value > 100 %}
     <span style="color:darkgreen;">{{ rendered_value }}</span>
       {% elsif value > 50 %}
-    <span style="color:goldenrod;">{{ rendered_value }}</span>
+    <span style="color:yellow;">{{ rendered_value }}</span>
       {% else %}
     <span style="color:darkred;">{{ rendered_value }}</span>
     {% endif %} ;;
