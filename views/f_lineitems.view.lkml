@@ -183,11 +183,17 @@ view: f_lineitems {
     sql: ${Gross_revenue}-${TotalCost} ;;
     value_format_name: usd
     drill_fields: [d_supplier.s_Account_Balance, d_supplier.s_region, Gross_Margin]
+    # link: {
+    #   label: "Searching suppliers"
+    #   # url: "https://www.google.com"
+    #   # url: "https://epam.cloud.looker.com/dashboards/243?fields=d_supplier.s_region"
+    #   url: "https://epam.cloud.looker.com/dashboards/243?region={{ _filters['d_supplier.region']}}"
+    # }
     link: {
-      label: "Searching suppliers"
+      label: "Target"
       # url: "https://www.google.com"
       # url: "https://epam.cloud.looker.com/dashboards/243?fields=d_supplier.s_region"
-      url: "https://epam.cloud.looker.com/dashboards/243?region={{ _filters['d_supplier.region']}}"
+      url: "https://epam.cloud.looker.com/looks/408?region={{ _filters['d_supplier.region']}}"
     }
   }
 
