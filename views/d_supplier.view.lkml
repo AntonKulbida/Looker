@@ -17,7 +17,7 @@ view: d_supplier {
     sql: ${TABLE}."S_NAME" ;;
   }
 
-  dimension: s_nation {
+  dimension: nation {
     type: string
     sql: ${TABLE}."S_NATION" ;;
   }

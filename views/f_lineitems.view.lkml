@@ -189,7 +189,7 @@ view: f_lineitems {
     # }
     link: {
       label: "Target"
-      url: "https://epam.cloud.looker.com/dashboards/245?region={{ _filters['d_supplier.region']}}"
+      url: "https://epam.cloud.looker.com/dashboards/245?Region={{ _filters['d_supplier.region']}}&Nation={{ _filters['d_supplier.nation']}}"
     }
   }
 
