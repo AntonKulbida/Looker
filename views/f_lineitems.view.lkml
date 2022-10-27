@@ -89,6 +89,10 @@ view: f_lineitems {
   dimension: l_shipmode {
     type: string
     sql: ${TABLE}."L_SHIPMODE" ;;
+    link: {
+      label: "Target"
+      url: "https://epam.cloud.looker.com/dashboards/245?l_shipmode={{ l_shipmode }}"
+    }
   }
 
   dimension: l_shippriority {
@@ -189,7 +193,7 @@ view: f_lineitems {
     # }
     link: {
       label: "Target"
-      url: "https://epam.cloud.looker.com/dashboards/245?Region={{ _filters['d_supplier.region']}}&Nation={{ _filters['d_supplier.nation']}}"
+      url: "https://epam.cloud.looker.com/dashboards/245?Region={{ _filters['d_supplier.region']}}&L_shipmode={{ value }}"
     }
   }
 
