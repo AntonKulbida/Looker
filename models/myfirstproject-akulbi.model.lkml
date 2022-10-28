@@ -2,7 +2,7 @@ connection: "tpchlooker"
 
 # include all the views
 include: "/views/**/*.view"
-# include: "/Dashboard/Test-akulbi.dashboard.lookml"
+include: "/Maindash.dashboard.lookml"
 
 datagroup: myfirstproject-akulbi_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
