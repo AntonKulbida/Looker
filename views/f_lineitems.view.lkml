@@ -89,10 +89,10 @@ view: f_lineitems {
   dimension: l_shipmode {
     type: string
     sql: ${TABLE}."L_SHIPMODE" ;;
-    link: {
-      label: "Target"
-      url: "https://epam.cloud.looker.com/dashboards/245?l_shipmode={{ l_shipmode }}"
-    }
+    # link: {
+    #   label: "Target"
+    #   url: "https://epam.cloud.looker.com/dashboards/245?L+Shipmode={{ value }}&Region={{ _filters['d_supplier.region']}}"
+    # }
   }
 
   dimension: l_shippriority {
@@ -187,14 +187,14 @@ view: f_lineitems {
     sql: ${Gross_revenue}-${TotalCost} ;;
     value_format_name: usd
     drill_fields: [d_supplier.s_Account_Balance, d_supplier.s_region, Gross_Margin]
-    # link: {
-    #   label: "Searching suppliers"
-    #   # url: "https://www.google.com"
-    # }
     link: {
-      label: "Target"
-      url: "https://epam.cloud.looker.com/dashboards/245?Region={{ _filters['d_supplier.region']}}&L_shipmode={{ value }}"
+      label: "Searching suppliers"
+      url: "http://www.google.com/search"
     }
+    # link: {
+    #   label: "Target"
+    #   url: "https://epam.cloud.looker.com/dashboards/245?Region={{ _filters['d_supplier.region']}}&L_shipmode={{ value }}"
+    # }
   }
 
   measure: MarginPercentage {
