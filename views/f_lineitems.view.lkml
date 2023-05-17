@@ -89,10 +89,25 @@ view: f_lineitems {
   dimension: l_shipmode {
     type: string
     sql: ${TABLE}."L_SHIPMODE" ;;
-    # link: {
-    #   label: "Target"
-    #   url: "https://epam.cloud.looker.com/dashboards/245?L+Shipmode={{ value }}&Region={{ _filters['d_supplier.region']}}"
-    # }
+    link: {
+      label: "Target"
+      url: "https://epam.cloud.looker.com/dashboards/245?L+Shipmode={{ value }}&Region={{ _filters['d_supplier.region']}}"
+    }
+    }
+    dimension: button {
+      type: string
+      link: {
+        label: "Target"
+        url: "https://epam.cloud.looker.com/dashboards/245?L+Shipmode={{ _filters['l_shipmode'] }}&Region={{ _filters['d_supplier.region']}}"
+      }
+      sql: 'dummy' ;;
+    }
+
+  measure: sold_percent_gauge {
+    type: number
+    sql: 100.0*${AVGSalePrice}/nullif(${count},0) ;;
+    value_format: "#.0\%"
+    html:   <img src="https://chart.googleapis.com/chart?chs=200x50&cht=ls&chco=0077CC&chf=bg,s,FFFFFF00&chds=a&chxt=x,y&chd=t:{{l_suppkey._value}}&chxr=0,-30,0,4"> ;;
   }
 
   dimension: l_shippriority {
@@ -186,7 +201,7 @@ view: f_lineitems {
     type: number
     sql: ${Gross_revenue}-${TotalCost} ;;
     value_format_name: usd
-    drill_fields: [d_supplier.s_Account_Balance, d_supplier.s_region, Gross_Margin]
+    drill_fields: [d_supplier.s_Account_Balance, d_supplier.region, Gross_Margin]
     link: {
       label: "Searching suppliers"
       url: "http://www.google.com/search"
