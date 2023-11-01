@@ -2,14 +2,14 @@ connection: "tpchlooker"
 
 # include all the views
 include: "/views/**/*.view"
-include: "/Maindash.dashboard.lookml"
+# include: "/Maindash.dashboard.lookml"
 
-datagroup: myfirstproject-akulbi_default_datagroup {
+datagroup: myfirstproject_akulbi_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
 }
 
-persist_with: myfirstproject-akulbi_default_datagroup
+persist_with: myfirstproject_akulbi_default_datagroup
 
 explore: f_lineitems {
   label: "Order Analysis"
