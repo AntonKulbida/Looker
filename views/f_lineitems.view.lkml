@@ -94,6 +94,7 @@ view: f_lineitems {
       url: "https://epam.cloud.looker.com/dashboards/245?L+Shipmode={{ value }}&Region={{ _filters['d_supplier.region']}}"
     }
     }
+
     dimension: button {
       type: string
       link: {
