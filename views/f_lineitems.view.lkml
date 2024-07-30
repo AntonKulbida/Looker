@@ -278,4 +278,9 @@ view: f_lineitems {
     type: count_distinct
     sql: ${l_orderkey} ;;
   }
+  measure: total_sales_from_items_sold {
+    type: sum
+    sql: ${l_totalprice} * (1 + ${l_tax}) ;;
+    value_format_name: usd
+  }
 }
