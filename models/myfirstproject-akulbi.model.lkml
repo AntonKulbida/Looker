@@ -22,7 +22,7 @@ explore: f_lineitems {
     relationship: many_to_one
   }
   join: d_supplier {
-    view_label: "Supplier"
+    view_label: "Supplier12"
     type: left_outer
     sql_on: ${f_lineitems.l_suppkey} = ${d_supplier.s_suppkey} ;;
     relationship: many_to_one
@@ -49,4 +49,4 @@ explore: d_part {}
 
 explore: d_supplier {}
 
-explore: test {}
+# explore: test {}
